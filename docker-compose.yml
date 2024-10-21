@@ -1,0 +1,22 @@
+services:
+  nextjs:
+    build:
+      context: .
+      target: runner
+    container_name: nextjs-app
+    restart: always
+
+  nginx:
+    build:
+      context: .
+      target: nginx
+    container_name: nextjs-nginx
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - nextjs
+
+networks:
+  default:
+    name: nextjs-network

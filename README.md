@@ -1,7 +1,9 @@
 # 部署 NextJS 与 App Router：不再只是 Vercel 的专属
 
 存在一种误解，认为在 Vercel 基础设施之外部署使用新 App Router 的 NextJS 应用很困难。
+
 事实并非如此。
+
 本文将解释如何使用 Docker 和 Docker Compose 部署 NextJS 应用，其中 Nginx 负责提供静态资源并充当反向代理。
 
 ## 构建基石：涉及到的技术栈
